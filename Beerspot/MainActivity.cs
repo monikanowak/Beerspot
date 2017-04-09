@@ -8,7 +8,7 @@ using Android.Locations;
 
 namespace Beerspot
 {
-    [Activity(Label = "Beerspot", MainLauncher = true, Icon = "@drawable/icon")]
+    [Activity(Label = "Beerspot", Icon = "@drawable/icon")]
     public class MainActivity : Activity
     {
         protected override void OnCreate(Bundle bundle)
