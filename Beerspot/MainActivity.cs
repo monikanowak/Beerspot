@@ -22,8 +22,16 @@ namespace Beerspot
         public void OnMapReady(GoogleMap map)
         {
             _map = map;
-        }
 
+            if (_map != null)
+            {
+
+                MarkerOptions markerOpt1 = new MarkerOptions();
+                markerOpt1.SetPosition(new LatLng(49.826287, 20.490268));
+                markerOpt1.SetTitle("Tu mieszkam :P");
+                _map.AddMarker(markerOpt1);
+            }
+        }
         protected override void OnCreate(Bundle bundle)
         {
             base.OnCreate(bundle);
