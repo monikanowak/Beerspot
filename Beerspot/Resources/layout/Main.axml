@@ -1,17 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:minWidth="25px"
-    android:minHeight="25px"
-    android:background="@drawable/bg"
-    android:gravity="center">
-    <Button
-        android:text="@string/callMap"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+    <fragment
+        android:id="@+id/map"
+        android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/callMapButton"
-        android:background="@android:color/transparent"
-        android:textColor="@android:color/primary_text_dark"/>
+        android:layout_height="match_parent"
+        class="com.google.android.gms.maps.MapFragment" />
 </LinearLayout>

@@ -3,5 +3,7 @@
     <string name="Hello">Hello World, Click Me!</string>
     <string name="ApplicationName">Beerspot</string>
     <string name="callMap">Mapa</string>
-  <string name="goToMap">Przejdź do mapy</string>
+    <string name="goToMap">Przejdź do mapy</string>
+    <string name="GoogleKey">AIzaSyD4cyvdkeaEfmAn6Xt1t8-DftqjmnQPgZs</string>
+
 </resources>

@@ -5,27 +5,46 @@ using Android.Widget;
 using Android.OS;
 using System.Collections.Generic;
 using Android.Locations;
+using Android.App;
+using Android.Widget;
+using Android.OS;
+using Android.Gms.Maps;
+using System;
+using Android.Gms.Maps.Model;
 
 namespace Beerspot
 {
     [Activity(Label = "Beerspot", Icon = "@drawable/icon")]
-    public class MainActivity : Activity
+    public class MainActivity : Activity, IOnMapReadyCallback
     {
+        private MapFragment _mapFragment;
+        private GoogleMap _map;
+        public void OnMapReady(GoogleMap map)
+        {
+            _map = map;
+        }
+
         protected override void OnCreate(Bundle bundle)
         {
             base.OnCreate(bundle);
 
             // Set our view from the "main" layout resource
-            SetContentView (Resource.Layout.Main);
+            SetContentView(Resource.Layout.Main);
 
-            Button callMapButton = FindViewById<Button>(Resource.Id.callMapButton);
-
-            callMapButton.Click += (sender, e) =>
+            _mapFragment = FragmentManager.FindFragmentByTag("map") as MapFragment;
+            if (_mapFragment == null)
             {
-                var geoUri = Android.Net.Uri.Parse("geo:50.0614319,19.9374877");
-                var mapIntent = new Intent(Intent.ActionView, geoUri);
-                StartActivity(mapIntent);
-            };
+                GoogleMapOptions mapOptions = new GoogleMapOptions()
+                    .InvokeMapType(GoogleMap.MapTypeSatellite)
+                    .InvokeZoomControlsEnabled(false)
+                    .InvokeCompassEnabled(true);
+
+                FragmentTransaction fragTx = FragmentManager.BeginTransaction();
+                _mapFragment = MapFragment.NewInstance(mapOptions);
+                fragTx.Add(Resource.Id.map, _mapFragment, "map");
+                fragTx.Commit();
+            }
+            _mapFragment.GetMapAsync(this);
         }
     }
 }
