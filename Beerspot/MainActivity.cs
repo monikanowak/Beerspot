@@ -25,7 +25,7 @@ namespace Beerspot
 
             if (_map != null)
             {
-
+                //marker
                 MarkerOptions markerOpt1 = new MarkerOptions();
                 markerOpt1.SetPosition(new LatLng(49.826287, 20.490268));
                 markerOpt1.SetTitle("Tu mieszkam :P");
