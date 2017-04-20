@@ -1,17 +1,45 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:minWidth="25px"
     android:minHeight="25px"
-    android:background="@drawable/bg"
-    android:gravity="center">
-    <Button
-        android:text="@string/callMap"
+    android:background="@drawable/bg">
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:minHeight="?attr/actionBarSize"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/callMapButton"
-        android:background="@android:color/transparent"
-        android:textColor="@android:color/primary_text_dark"/>
-</LinearLayout>
+        android:layout_height="wrap_content">
+        <ImageView
+            android:src="@drawable/logosmall"
+            android:layout_height="30dp"
+            android:layout_width="30dp"
+            android:layout_gravity="center"/>
+        <TextView
+            android:text="@string/ApplicationName"
+            android:textSize="20dp"
+            android:textStyle="normal"
+            android:textAlignment="center"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/toolbarTitle"
+            android:layout_gravity="center" />
+    </android.support.v7.widget.Toolbar>
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:gravity="center">
+        <Button
+            android:text="@string/callMap"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/callMapButton"
+            android:background="@android:color/transparent"
+            android:textColor="@android:color/primary_text_dark" />
+    </LinearLayout>
+</RelativeLayout>

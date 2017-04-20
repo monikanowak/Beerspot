@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:minWidth="25px"
+    android:minHeight="25px"
+    android:background="@drawable/bg">
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:paddingTop="10dip"
+        android:paddingBottom="100dp">
+        <ImageView
+            android:src="@drawable/logosmall"
+            android:layout_height="22dp"
+            android:layout_width="22dp" />
+        <TextView
+            android:text="@string/ApplicationName"
+            android:textSize="20dp"
+            android:textStyle="normal"
+            android:textAlignment="center"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView1"
+            android:gravity="center" />
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:paddingBottom="100dp">
+        <Button
+            android:text="@string/callMap"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/mapa_button"
+            android:clickable="true"
+            android:textColor="@android:color/primary_text_dark"
+            android:textSize="20dp"
+            android:outlineProvider="none"
+            android:background="@drawable/border"
+            android:layout_marginBottom="40dip"
+            android:padding="10dip" />
+        <Button
+            android:text="@string/filters"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/filtr_button"
+            android:clickable="true"
+            android:textColor="@android:color/primary_text_dark"
+            android:textSize="20dp"
+            android:outlineProvider="none"
+            android:background="@drawable/border"
+            android:layout_marginBottom="40dip"
+            android:padding="10dip" />
+        <Button
+            android:text="@string/note"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/powiedomienia_button"
+            android:clickable="true"
+            android:textColor="@android:color/primary_text_dark"
+            android:textSize="20dp"
+            android:outlineProvider="none"
+            android:background="@drawable/border"
+            android:layout_marginBottom="40dip"
+            android:padding="10dip" />
+        <Button
+            android:text="@string/help"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/pomoc_button"
+            android:clickable="true"
+            android:textColor="@android:color/primary_text_dark"
+            android:textSize="20dp"
+            android:outlineProvider="none"
+            android:background="@drawable/border"
+            android:layout_marginBottom="40dip"
+            android:padding="10dip" />
+    </LinearLayout>
+</LinearLayout>
