@@ -1,15 +1,6 @@
-﻿using System;
-using Android.App;
-using Android.Content;
-using Android.Widget;
-using Android.OS;
-using System.Collections.Generic;
-using Android.Locations;
-using Android.App;
-using Android.Widget;
+﻿using Android.App;
 using Android.OS;
 using Android.Gms.Maps;
-using System;
 using Android.Gms.Maps.Model;
 
 namespace Beerspot
@@ -19,9 +10,9 @@ namespace Beerspot
     {
         private MapFragment _mapFragment;
         private GoogleMap _map;
-        public void OnMapReady(GoogleMap map)
+        public void OnMapReady(GoogleMap googleMap)
         {
-            _map = map;
+            _map = googleMap;
 
             if (_map != null)
             {
@@ -32,6 +23,7 @@ namespace Beerspot
                 _map.AddMarker(markerOpt1);
             }
         }
+
         protected override void OnCreate(Bundle bundle)
         {
             base.OnCreate(bundle);
