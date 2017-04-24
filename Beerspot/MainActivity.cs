@@ -34,8 +34,8 @@ namespace Beerspot
             if (_mapFragment == null)
             {
                 GoogleMapOptions mapOptions = new GoogleMapOptions()
-                    .InvokeMapType(GoogleMap.MapTypeSatellite)
-                    .InvokeZoomControlsEnabled(false)
+                    .InvokeMapType(GoogleMap.MapTypeNormal)
+                    .InvokeZoomControlsEnabled(true)
                     .InvokeCompassEnabled(true);
 
                 FragmentTransaction fragTx = FragmentManager.BeginTransaction();
